@@ -73,7 +73,7 @@ button{
 </audio>
 
 <img src="us.jpg" class="minion">
-<h1>Maipelo, will you be my Valentine? 💛</h1>
+<h1>Good morning my love, will you be my Valentine? ❤️</h1>
 
 <div id="days"></div>
 <div id="typeText"></div>
@@ -95,7 +95,7 @@ document.getElementById("days").innerText =
 const messages=[
 "Maipelo, you're my favorite person 💕",
 "4 years of bliss 😌",
-"I promise snacks and good vibes",
+"I promise novels , snacks and good vibes",
 "You know you want to click Yes…"
 ];
 let mi=0, ci=0;
@@ -131,28 +131,29 @@ function celebrate(){
     document.body.style.background =
       "linear-gradient(135deg,#ff758c,#ff7eb3)";
 
-    document.body.innerHTML += `
-    <div style="margin-top:30px;color:white;max-width:600px;font-size:18px;">
-        <h2>💌 A Letter For You, Maipelo</h2>
-
-        <p>
-        <!-- WRITE YOUR FIRST PARAGRAPH HERE -->
-        </p>
-
-        <p>
-        <!-- WRITE YOUR SECOND PARAGRAPH HERE -->
-        </p>
-
-        <p>
-        <!-- WRITE YOUR THIRD PARAGRAPH HERE -->
-        </p>
-
-        <p>
-        <!-- WRITE YOUR CLOSING MESSAGE HERE -->
-        </p>
-    </div>`;
+    document.getElementById("letterBox").style.bottom = "0";
 }
 </script>
+<div id="letterBox" style="
+position:fixed;
+bottom:-100%;
+left:0;
+width:100%;
+height:60%;
+background:rgba(0,0,0,0.85);
+color:white;
+padding:30px;
+box-sizing:border-box;
+transition:bottom 0.8s ease;
+overflow:auto;
+">
+    <h2>💌 A Letter For You, Maipelo</h2>
+
+    <p><!-- WRITE YOUR FIRST PARAGRAPH HERE --></p>
+    <p><!-- WRITE YOUR SECOND PARAGRAPH HERE --></p>
+    <p><!-- WRITE YOUR THIRD PARAGRAPH HERE --></p>
+    <p><!-- WRITE YOUR CLOSING MESSAGE HERE --></p>
+</div>
 
 </body>
 </html>
